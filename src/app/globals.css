@@ -1,0 +1,227 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans), var(--font-noto-tc), ui-sans-serif, system-ui, "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  /* Taiwan Forward semantic tokens */
+  --color-heading: var(--heading);
+  --color-body: var(--body-text);
+  --color-dim: var(--dim-text);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-teal: var(--teal);
+  --color-sand: var(--sand);
+  --color-bluegrey: var(--bluegrey);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/*
+ * Taiwan Forward — permanent dark, low-saturation research theme.
+ * Palette per project specification (measured for contrast on dark surfaces).
+ */
+:root {
+  --radius: 0.5rem;
+
+  /* Surfaces */
+  --background: #0f141a;          /* deep charcoal — primary background */
+  --surface: #151c24;             /* slate dark — secondary background */
+  --surface-2: #1b2530;           /* muted slate — cards & section surfaces */
+
+  /* Text */
+  --heading: #e8eef3;             /* soft off-white — headings */
+  --body-text: #c7d1da;           /* cool light grey — body */
+  --dim-text: #93a1ae;            /* muted grey blue — secondary */
+
+  /* Accents (muted, non-partisan) */
+  --teal: #6fa3a8;                /* muted teal — primary accent */
+  --sand: #c8b38e;                /* soft sand — secondary accent */
+  --bluegrey: #7f93a6;            /* dusty blue grey — supporting */
+
+  /* shadcn mapping */
+  --foreground: #c7d1da;
+  --card: #1b2530;
+  --card-foreground: #c7d1da;
+  --popover: #151c24;
+  --popover-foreground: #c7d1da;
+  --primary: #6fa3a8;
+  --primary-foreground: #0f141a;
+  --secondary: #1b2530;
+  --secondary-foreground: #e8eef3;
+  --muted: #1b2530;
+  --muted-foreground: #93a1ae;
+  --accent: #1b2530;
+  --accent-foreground: #e8eef3;
+  --destructive: #b08f7a;
+  --border: #2a3642;
+  --input: #2a3642;
+  --ring: #6fa3a8;
+
+  /* Chart series palette (muted, distinguishable; never encodes judgment) */
+  --chart-1: #6fa3a8;
+  --chart-2: #c8b38e;
+  --chart-3: #7f93a6;
+  --chart-4: #a88fa8;
+  --chart-5: #8fa58c;
+  --chart-6: #b08f7a;
+
+  /* sidebar tokens (mapped to theme) */
+  --sidebar: #151c24;
+  --sidebar-foreground: #c7d1da;
+  --sidebar-primary: #6fa3a8;
+  --sidebar-primary-foreground: #0f141a;
+  --sidebar-accent: #1b2530;
+  --sidebar-accent-foreground: #e8eef3;
+  --sidebar-border: #2a3642;
+  --sidebar-ring: #6fa3a8;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: rgba(111, 163, 168, 0.28);
+    color: #e8eef3;
+  }
+  /* Custom scrollbar for long lists and tables */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #2a3642 transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: #2a3642;
+    border-radius: 8px;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: #3a4a58;
+  }
+}
+
+@layer components {
+  /* Long-form reading typography (bilingual EN / zh-TW) */
+  .tf-prose {
+    color: var(--body-text);
+    font-size: 1rem;
+    line-height: 1.85; /* comfortable for substantial Chinese paragraphs */
+    letter-spacing: 0.01em;
+  }
+  .tf-prose p {
+    margin-block: 0.9em;
+  }
+  .tf-prose p:first-child {
+    margin-block-start: 0;
+  }
+  .tf-prose strong,
+  .tf-prose b {
+    color: var(--heading);
+    font-weight: 600;
+  }
+  .tf-prose a {
+    color: var(--teal);
+    text-decoration: underline;
+    text-decoration-color: rgba(111, 163, 168, 0.45);
+    text-underline-offset: 3px;
+  }
+  .tf-prose a:hover {
+    text-decoration-color: var(--teal);
+  }
+  .tf-prose code {
+    font-family: var(--font-mono), monospace;
+    font-size: 0.875em;
+    background: rgba(27, 37, 48, 0.9);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.1em 0.35em;
+  }
+
+  /* Display type for chapter kickers */
+  .tf-kicker {
+    font-family: var(--font-mono), monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
+
+  /* Subtle hairline separator used between reading sections */
+  .tf-hairline {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--border) 18%,
+      var(--border) 82%,
+      transparent
+    );
+    height: 1px;
+  }
+
+  /* Focus visibility (WCAG) */
+  .tf-focus:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}

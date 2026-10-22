@@ -1,0 +1,298 @@
+/**
+ * Taiwan Forward — the 14 research dimensions.
+ * The dimensions define the extensible research architecture. Status labels
+ * distinguish verified published research from work in progress and planned
+ * topics. Nothing here claims completed investigation for subjects that have
+ * not yet been researched and verified.
+ */
+
+import type { Dimension } from "./types";
+
+export const dimensions: Dimension[] = [
+  {
+    id: "population",
+    no: "01",
+    title: { en: "Population and Family", zh: "人口與家庭" },
+    short: {
+      en: "Fertility, aging, population structure, family formation, households, childcare, intergenerational support and migration.",
+      zh: "生育趨勢、人口高齡化、人口結構、婚姻與家庭組成、家戶型態、托育供給、世代支持與人口遷移。",
+    },
+    topics: [
+      { en: "Fertility trends", zh: "生育趨勢" },
+      { en: "Population aging", zh: "人口高齡化" },
+      { en: "Population structure", zh: "人口結構" },
+      { en: "Marriage and family formation", zh: "婚姻與家庭組成" },
+      { en: "Household composition", zh: "家戶組成" },
+      { en: "Childcare availability", zh: "托育供給" },
+      { en: "Intergenerational support", zh: "世代間支持" },
+      { en: "Migration and demographic sustainability", zh: "遷移與人口永續" },
+    ],
+    status: "published",
+    lastUpdate: "2026-10-22",
+    chapterView: "chapter-01",
+  },
+  {
+    id: "economy",
+    no: "02",
+    title: { en: "Economy and Industry", zh: "經濟與產業" },
+    short: {
+      en: "Economic development, productivity, median wages, industrial diversification, SMEs, innovation and resilience.",
+      zh: "經濟發展、生產力、薪資中位數、產業多元性、中小企業、創新與經濟韌性。",
+    },
+    topics: [
+      { en: "Economic development", zh: "經濟發展" },
+      { en: "Productivity", zh: "生產力" },
+      { en: "Median wages", zh: "薪資中位數" },
+      { en: "Industrial diversification", zh: "產業多元性" },
+      { en: "Small and medium enterprises", zh: "中小企業" },
+      { en: "Innovation", zh: "創新" },
+      { en: "International competitiveness", zh: "國際競爭力" },
+      { en: "Economic concentration and resilience", zh: "經濟集中度與韌性" },
+    ],
+    status: "planned",
+  },
+  {
+    id: "housing",
+    no: "03",
+    title: { en: "Housing and Cost of Living", zh: "居住與生活成本" },
+    short: {
+      en: "Housing affordability, rent burdens, ownership, housing quality, cost of living and generational accessibility.",
+      zh: "居住可負擔性、租金負擔、自有住宅、居住品質、生活成本與跨世代可及性。",
+    },
+    topics: [
+      { en: "Housing affordability", zh: "居住可負擔性" },
+      { en: "Rent burdens", zh: "租金負擔" },
+      { en: "Home ownership", zh: "自有住宅" },
+      { en: "Housing quality", zh: "居住品質" },
+      { en: "Cost of living", zh: "生活成本" },
+      { en: "Urban–rural differences", zh: "城鄉差異" },
+      { en: "Housing accessibility", zh: "住宅可及性" },
+      { en: "Generational affordability", zh: "跨世代可負擔性" },
+    ],
+    status: "planned",
+  },
+  {
+    id: "labor",
+    no: "04",
+    title: { en: "Labor and Working Conditions", zh: "勞動與工作條件" },
+    short: {
+      en: "Working hours, job quality, wage growth, employment stability, occupational safety, youth employment and work-life balance.",
+      zh: "工時、工作品質、薪資成長、就業穩定、職業安全、青年就業與工作生活平衡。",
+    },
+    topics: [
+      { en: "Working hours", zh: "工時" },
+      { en: "Job quality", zh: "工作品質" },
+      { en: "Wage growth", zh: "薪資成長" },
+      { en: "Employment stability", zh: "就業穩定" },
+      { en: "Occupational safety", zh: "職業安全" },
+      { en: "Youth employment", zh: "青年就業" },
+      { en: "Labor productivity", zh: "勞動生產力" },
+      { en: "Work-life balance", zh: "工作與生活平衡" },
+    ],
+    status: "planned",
+  },
+  {
+    id: "education",
+    no: "05",
+    title: { en: "Education and Talent", zh: "教育與人才" },
+    short: {
+      en: "Educational access and outcomes, student well-being, academic pressure, higher education, skills and lifelong learning.",
+      zh: "教育機會與成果、學生身心健康、升學壓力、高等教育、技能落差與終身學習。",
+    },
+    topics: [
+      { en: "Educational access", zh: "教育機會" },
+      { en: "Educational outcomes", zh: "教育成果" },
+      { en: "Student well-being", zh: "學生身心健康" },
+      { en: "Academic pressure", zh: "升學壓力" },
+      { en: "Higher education", zh: "高等教育" },
+      { en: "Skills mismatch", zh: "技能落差" },
+      { en: "Lifelong learning", zh: "終身學習" },
+      { en: "Research and talent development", zh: "研究與人才培育" },
+    ],
+    status: "planned",
+  },
+  {
+    id: "health",
+    no: "06",
+    title: { en: "Healthcare and Well-being", zh: "醫療與健康" },
+    short: {
+      en: "Life expectancy, healthcare access and affordability, prevention, mental health, workforce and regional disparities.",
+      zh: "平均餘命、醫療可及性與可負擔性、預防醫學、心理健康、醫事人力與區域差異。",
+    },
+    topics: [
+      { en: "Life expectancy", zh: "平均餘命" },
+      { en: "Healthy life expectancy", zh: "健康平均餘命" },
+      { en: "Healthcare access", zh: "醫療可及性" },
+      { en: "Healthcare affordability", zh: "醫療可負擔性" },
+      { en: "Preventive medicine", zh: "預防醫學" },
+      { en: "Mental health", zh: "心理健康" },
+      { en: "Healthcare workforce", zh: "醫事人力" },
+      { en: "Regional disparities", zh: "區域差異" },
+    ],
+    status: "planned",
+  },
+  {
+    id: "social-protection",
+    no: "07",
+    title: { en: "Social Protection and Inequality", zh: "社會保護與不平等" },
+    short: {
+      en: "Income and wealth inequality, poverty, social mobility, disability inclusion, elderly support and long-term care.",
+      zh: "所得與財富不平等、貧窮、社會流動、身障共融、長者支持與長期照顧。",
+    },
+    topics: [
+      { en: "Income inequality", zh: "所得不平等" },
+      { en: "Wealth inequality", zh: "財富不平等" },
+      { en: "Poverty", zh: "貧窮" },
+      { en: "Social mobility", zh: "社會流動" },
+      { en: "Disability inclusion", zh: "身障共融" },
+      { en: "Elderly support", zh: "長者支持" },
+      { en: "Long-term care", zh: "長期照顧" },
+      { en: "Social protection effectiveness", zh: "社會保護成效" },
+    ],
+    status: "planned",
+  },
+  {
+    id: "environment",
+    no: "08",
+    title: { en: "Environment and Energy", zh: "環境與能源" },
+    short: {
+      en: "Air quality, water, energy reliability and affordability, emissions, biodiversity, waste and climate adaptation.",
+      zh: "空氣品質、水資源、能源穩定與可負擔性、排放、生物多樣性、廢棄物與氣候調適。",
+    },
+    topics: [
+      { en: "Air quality", zh: "空氣品質" },
+      { en: "Water resources", zh: "水資源" },
+      { en: "Energy reliability", zh: "能源穩定" },
+      { en: "Electricity affordability", zh: "電力可負擔性" },
+      { en: "Emissions", zh: "排放" },
+      { en: "Biodiversity", zh: "生物多樣性" },
+      { en: "Waste management", zh: "廢棄物管理" },
+      { en: "Climate adaptation and resilience", zh: "氣候調適與韌性" },
+    ],
+    status: "planned",
+  },
+  {
+    id: "transportation",
+    no: "09",
+    title: { en: "Transportation and Urban Development", zh: "交通與都市發展" },
+    short: {
+      en: "Pedestrian safety, road fatalities, public transportation, urban accessibility, planning and regional connectivity.",
+      zh: "行人安全、道路死亡、公共運輸、都市可及性、都市規劃與區域連結。",
+    },
+    topics: [
+      { en: "Pedestrian safety", zh: "行人安全" },
+      { en: "Road fatalities", zh: "道路死亡" },
+      { en: "Public transportation", zh: "公共運輸" },
+      { en: "Urban accessibility", zh: "都市可及性" },
+      { en: "Traffic congestion", zh: "交通壅塞" },
+      { en: "Urban planning", zh: "都市規劃" },
+      { en: "Regional connectivity", zh: "區域連結" },
+      { en: "Mobility for vulnerable groups", zh: "弱勢族群行的權利" },
+    ],
+    status: "planned",
+  },
+  {
+    id: "food",
+    no: "10",
+    title: { en: "Food Systems and Agriculture", zh: "糧食與農業" },
+    short: {
+      en: "Food security and safety, agricultural sustainability, supply-chain resilience, affordability, nutrition and food waste.",
+      zh: "糧食安全與食品安全、農業永續、供應鏈韌性、糧食可負擔性、營養與食物浪費。",
+    },
+    topics: [
+      { en: "Food security", zh: "糧食安全" },
+      { en: "Food safety", zh: "食品安全" },
+      { en: "Agricultural sustainability", zh: "農業永續" },
+      { en: "Supply-chain resilience", zh: "供應鏈韌性" },
+      { en: "Food affordability", zh: "糧食可負擔性" },
+      { en: "Food waste", zh: "食物浪費" },
+      { en: "Nutrition", zh: "營養" },
+      { en: "Agricultural labor and productivity", zh: "農業勞動與生產力" },
+    ],
+    status: "planned",
+  },
+  {
+    id: "technology",
+    no: "11",
+    title: { en: "Technology and Digital Society", zh: "科技與數位社會" },
+    short: {
+      en: "Digital access and inclusion, cybersecurity, AI readiness, digital literacy, data protection and critical dependencies.",
+      zh: "數位近用與包容、資安、AI 準備度、數位素養、資料保護與關鍵技術依賴。",
+    },
+    topics: [
+      { en: "Digital accessibility", zh: "數位近用" },
+      { en: "Cybersecurity", zh: "資訊安全" },
+      { en: "Artificial intelligence readiness", zh: "AI 準備度" },
+      { en: "Digital literacy", zh: "數位素養" },
+      { en: "Technology governance", zh: "科技治理" },
+      { en: "Data protection", zh: "資料保護" },
+      { en: "Digital inclusion", zh: "數位包容" },
+      { en: "Critical technological dependencies", zh: "關鍵技術依賴" },
+    ],
+    status: "planned",
+  },
+  {
+    id: "governance",
+    no: "12",
+    title: { en: "Public Governance and Institutions", zh: "公共治理與制度" },
+    short: {
+      en: "Administrative efficiency, public service delivery, transparency, institutional effectiveness, judicial access and trust.",
+      zh: "行政效率、公共服務輸送、透明度、制度效能、司法可及性與制度信任。",
+    },
+    topics: [
+      { en: "Administrative efficiency", zh: "行政效率" },
+      { en: "Public service delivery", zh: "公共服務輸送" },
+      { en: "Transparency", zh: "透明度" },
+      { en: "Institutional effectiveness", zh: "制度效能" },
+      { en: "Judicial accessibility", zh: "司法可及性" },
+      { en: "Regulatory quality", zh: "法規品質" },
+      { en: "Public accountability", zh: "公共課責" },
+      { en: "Trust in institutions", zh: "制度信任" },
+    ],
+    status: "planned",
+  },
+  {
+    id: "society-culture",
+    no: "13",
+    title: { en: "Social Relationships and Culture", zh: "社會關係與文化" },
+    short: {
+      en: "Social trust, community participation, loneliness, cultural preservation, cohesion, civic engagement and quality of life.",
+      zh: "社會信任、社區參與、孤獨感、文化保存、社會凝聚、公民參與與生活品質。",
+    },
+    topics: [
+      { en: "Social trust", zh: "社會信任" },
+      { en: "Community participation", zh: "社區參與" },
+      { en: "Loneliness", zh: "孤獨感" },
+      { en: "Cultural preservation", zh: "文化保存" },
+      { en: "Social cohesion", zh: "社會凝聚" },
+      { en: "Civic engagement", zh: "公民參與" },
+      { en: "Intergenerational relationships", zh: "世代關係" },
+      { en: "Quality of life", zh: "生活品質" },
+    ],
+    status: "planned",
+  },
+  {
+    id: "safety-resilience",
+    no: "14",
+    title: { en: "Safety and Societal Resilience", zh: "安全與社會韌性" },
+    short: {
+      en: "Disaster preparedness, infrastructure resilience, fraud prevention, emergency response, public safety and continuity.",
+      zh: "災害防救、基礎設施韌性、防詐、緊急應變、公共安全與供應連續性。",
+    },
+    topics: [
+      { en: "Natural disaster preparedness", zh: "災害防救" },
+      { en: "Infrastructure resilience", zh: "基礎設施韌性" },
+      { en: "Fraud prevention", zh: "防詐" },
+      { en: "Emergency response", zh: "緊急應變" },
+      { en: "Public safety", zh: "公共安全" },
+      { en: "Supply-chain continuity", zh: "供應鏈連續性" },
+      { en: "Community preparedness", zh: "社區防災" },
+      { en: "Civilian resilience", zh: "民防韌性" },
+    ],
+    status: "planned",
+  },
+];
+
+export function getDimension(id: string): Dimension | undefined {
+  return dimensions.find((d) => d.id === id);
+}
